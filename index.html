@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Trace Simulation</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #canvas-container { position: relative; }
+        #simulationCanvas {
+            border: 1px solid #000;
+            background-color: #f0f0f0;
+        }
+        #controls {
+            margin-top: 10px;
+        }
+        #steering-indicator {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Car Trace Simulation</h1>
+    <div id="controls">
+        Car Length: <input type="number" id="carLength" value="60" min="30" max="120"> px &nbsp;
+        Car Width: <input type="number" id="carWidth" value="30" min="15" max="60"> px &nbsp;
+        <button id="resetButton">Reset</button>
+        <button id="clearLinesButton">Clear Reference Lines</button>
+        <button id="rotateButton">Rotate 90° Clockwise</button>
+        <br><br>
+        Speed: <input type="range" id="speedControl" min="-5" max="5" step="0.1" value="0">
+        <span id="speedLabel">0</span> px/frame
+    </div>
+    <div id="canvas-container">
+        <canvas id="simulationCanvas" width="800" height="600"></canvas>
+        <canvas id="steeringIndicator" width="100" height="100"></canvas>
+    </div>
+    <p>Instructions:</p>
+    <ul>
+        <li>Click on the canvas to place the car.</li>
+        <li>Hold <strong>Shift</strong> and click to place obstacles.</li>
+        <li>Hold <strong>Alt</strong> and click and drag to draw reference lines.</li>
+        <li>Use the <strong>Left</strong> and <strong>Right Arrow</strong> keys to steer.</li>
+        <li>Use the <strong>Up</strong> and <strong>Down Arrow</strong> keys to control speed.</li>
+        <li>Adjust speed using the scrollbar.</li>
+        <li>Click the <strong>Rotate 90° Clockwise</strong> button to rotate the car.</li>
+    </ul>
+    <script src="simulation.js"></script>
+</body>
+</html>
+
