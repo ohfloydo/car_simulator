@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D Car Trace Simulation</title>
+    <style>
+        body { margin: 0; overflow: hidden; font-family: Arial, sans-serif; }
+        #overlay {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            z-index: 1;
+        }
+        #overlay input, #overlay button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="overlay">
+        Car Length: <input type="number" id="carLength" value="4" min="2" max="6" step="0.1"> m &nbsp;
+        Car Width: <input type="number" id="carWidth" value="2" min="1" max="3" step="0.1"> m &nbsp;
+        <button id="resetButton">Reset</button>
+        <button id="rotateButton">Rotate 90° Clockwise</button>
+        <button id="clearLinesButton">Clear Reference Lines</button>
+        <br>
+        Speed: <input type="range" id="speedControl" min="-5" max="5" step="0.1" value="0">
+        <span id="speedLabel">0</span> m/s
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r132/three.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
